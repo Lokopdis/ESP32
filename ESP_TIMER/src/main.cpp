@@ -7,7 +7,10 @@ esp_timer_handle_t my_timer;
 // Função de callback que será chamada a cada 100 ms
 void IRAM_ATTR onTimer(void* arg) {
     // Código a ser executado a cada 100 ms
-    Serial.println("Timer disparado!");
+    int64_t time_us = esp_timer_get_time(); // Tempo em microsegundos
+    Serial.print("Timer disparado! Tempo decorrido: ");
+    Serial.print(time_us / 1000); // Converte para milissegundos
+    Serial.println(" ms");
 }
 
 void setup() {
