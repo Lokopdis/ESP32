@@ -1,5 +1,7 @@
+///////////////////////// BIBLIOTECAS /////////////////////////
 #include <Arduino.h>
 #include "esp_timer.h"
+
 
 // Declarar o timer handle
 esp_timer_handle_t my_timer;
